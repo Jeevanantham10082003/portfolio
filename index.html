@@ -1,77 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Jo | Portfolio</title>
-  <link rel="stylesheet" href="style.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jeevanantham | UI/UX Designer</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- HERO SECTION -->
-  <header class="hero">
-    <h1>Hi, I'm <span>Jo</span></h1>
-    <p>ECE Student | UI/UX Designer | Frontend Learner</p>
-    <div class="buttons">
-      <a href="#projects" class="btn">View Projects</a>
-      <a href="#contact" class="btn outline">Contact Me</a>
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo">LOGO</div>
+  <ul>
+    <li>Home</li>
+    <li>Services</li>
+    <li>About me</li>
+    <li>Portfolio</li>
+    <li>Contact me</li>
+  </ul>
+  <button class="btn">Hire Me</button>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <h4>Hi I am</h4>
+  <h1>JEEVANANTHAM</h1>
+  <h2>UI/UX <span>designer</span></h2>
+
+  <div class="hero-btns">
+    <button class="btn">Hire Me</button>
+    <button class="btn outline">Download CV</button>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section">
+  <h2>Services</h2>
+  <p class="subtitle">Lorem ipsum dolor sit amet consectetur.</p>
+
+  <div class="card-grid">
+    <div class="card">App Design</div>
+    <div class="card">Web Design</div>
+    <div class="card">UI Design</div>
+    <div class="card">UX Research</div>
+    <div class="card">Prototyping</div>
+    <div class="card">Branding</div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section">
+  <h2>About Me</h2>
+  <p class="about-text">
+    A software engineer, the modern architect of digital realms, transforms ideas
+    into intuitive interfaces and engaging experiences.
+  </p>
+
+  <button class="btn">Download CV</button>
+
+  <div class="skills">
+    <div>
+      <h3>85%</h3>
+      <p>Adobe Photoshop</p>
     </div>
-  </header>
-
-  <!-- ABOUT -->
-  <section class="about" id="about">
-    <h2>About Me</h2>
-    <p>
-      I am an Electronics and Communication Engineering student passionate about
-      UI/UX design and frontend development. I enjoy converting ideas into clean,
-      user-friendly digital experiences.
-    </p>
-  </section>
-
-  <!-- SKILLS -->
-  <section class="skills">
-    <h2>Skills</h2>
-    <div class="skill-grid">
-      <span>HTML</span>
-      <span>CSS</span>
-      <span>JavaScript</span>
-      <span>React</span>
-      <span>Figma</span>
-      <span>Canva</span>
+    <div>
+      <h3>100%</h3>
+      <p>Figma</p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- PROJECTS -->
-  <section class="projects" id="projects">
-    <h2>Projects</h2>
+<!-- PORTFOLIO -->
+<section class="section">
+  <h2>Portfolio</h2>
 
-    <div class="project-card">
-      <h3>Smart Greenhouse System</h3>
-      <p>IoT-based system for climate control and plant disease detection.</p>
-    </div>
+  <div class="filters">
+    <button class="btn small">All</button>
+    <button class="btn small outline">Website Design</button>
+    <button class="btn small outline">App Design</button>
+    <button class="btn small outline">Branding</button>
+  </div>
 
-    <div class="project-card">
-      <h3>Portfolio Website</h3>
-      <p>Personal responsive portfolio designed in Figma and built using HTML & CSS.</p>
-    </div>
+  <div class="portfolio-grid">
+    <div class="portfolio-card">Project</div>
+    <div class="portfolio-card">Project</div>
+    <div class="portfolio-card">Project</div>
+    <div class="portfolio-card">Project</div>
+    <div class="portfolio-card">Project</div>
+    <div class="portfolio-card">Project</div>
+  </div>
+</section>
 
-  </section>
+<!-- CONTACT -->
+<section class="section">
+  <h2>Contact me</h2>
 
-  <!-- CONTACT -->
-  <section class="contact" id="contact">
-    <h2>Contact</h2>
-    <p>Email: <strong>yourmail@gmail.com</strong></p>
-    <p>LinkedIn: <a href="#" target="_blank">linkedin.com/in/yourname</a></p>
-    <p>
-      <a href="https://www.figma.com/proto/IOooyVNW5lDNux8GLYbGGB/Personal-Portfolio" target="_blank">
-        View Figma Prototype
-      </a>
-    </p>
-  </section>
+  <form class="contact-form">
+    <input type="text" placeholder="Name">
+    <input type="email" placeholder="Email">
+    <textarea placeholder="Message"></textarea>
+    <button class="btn">Send</button>
+  </form>
+</section>
 
-  <footer>
-    <p>© 2025 Jo. All rights reserved.</p>
-  </footer>
+<!-- FOOTER -->
+<footer>
+  <p>© Designed by Jeevanantham UI/UX Designer</p>
+</footer>
 
 </body>
 </html>

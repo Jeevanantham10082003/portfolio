@@ -1,124 +1,208 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Jeevanantham | UI/UX Designer</title>
+  <meta charset="UTF-8">
+  <title>Jo | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Google Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-  <link rel="stylesheet" href="style.css">
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f6f8;
+      color: #333;
+      transition: 0.3s;
+    }
+
+    body.dark {
+      background: #121212;
+      color: #e0e0e0;
+    }
+
+    header {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    body.dark header {
+      background: #000;
+    }
+
+    header img {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      border: 4px solid white;
+      margin-bottom: 15px;
+    }
+
+    header h1 {
+      margin: 10px 0 5px;
+      font-size: 32px;
+    }
+
+    header p {
+      font-size: 16px;
+      opacity: 0.9;
+    }
+
+    section {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    h2 {
+      color: #2c3e50;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 8px;
+    }
+
+    body.dark h2 {
+      color: #ffffff;
+      border-color: #444;
+    }
+
+    .skills span {
+      display: inline-block;
+      background: #3498db;
+      color: white;
+      padding: 8px 14px;
+      margin: 6px;
+      border-radius: 20px;
+      font-size: 14px;
+    }
+
+    .project {
+      background: white;
+      padding: 15px;
+      margin: 15px 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    body.dark .project {
+      background: #1e1e1e;
+    }
+
+    a {
+      color: #3498db;
+      text-decoration: none;
+    }
+
+    .resume-btn {
+      display: inline-block;
+      background: #3498db;
+      color: white;
+      padding: 12px 18px;
+      border-radius: 6px;
+      margin-top: 10px;
+    }
+
+    footer {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    body.dark footer {
+      background: #000;
+    }
+
+    .toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      padding: 10px 14px;
+      border-radius: 20px;
+      border: none;
+      cursor: pointer;
+      font-size: 14px;
+    }
+  </style>
 </head>
+
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar">
-  <div class="logo">LOGO</div>
+  <!-- Dark Mode Button -->
+  <button class="toggle" onclick="toggleMode()">🌙 Dark</button>
 
-  <ul class="nav-links">
-    <li><a href="#home" class="active">Home</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#portfolio">Portfolio</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
+  <header>
+    <!-- PROFILE PHOTO -->
+    <img src="profile.jpg" alt="Profile Photo">
 
-  <div class="nav-actions">
-    <button class="btn desktop-btn">Hire Me</button>
-    <button class="theme-toggle" id="themeToggle">🌙</button>
-    <div class="hamburger" id="hamburger">☰</div>
-  </div>
-</nav>
+    <h1>Jo</h1>
+    <p>ECE Student | IoT | Web Development</p>
+  </header>
 
-<!-- HERO (NO reveal class) -->
-<section class="hero hero-animate" id="home">
-  <p class="intro">Hi I am</p>
-  <h1>JEEVANANTHAM</h1>
-  <h2>UI/UX <span>Designer</span></h2>
+  <section>
+    <h2>About Me</h2>
+    <p>
+      I am an Electronics and Communication Engineering student with interest
+      in IoT, Embedded Systems, and Web Development. I enjoy building smart
+      real-world projects and learning new technologies.
+    </p>
+  </section>
 
-  <div class="hero-btns">
-    <button class="btn">Hire Me</button>
-    <button class="btn outline">Download CV</button>
-  </div>
-</section>
-
-<!-- SERVICES -->
-<section class="section reveal" id="services">
-  <h2>Services</h2>
-  <p class="subtitle">Design solutions for modern products</p>
-
-  <div class="card-grid">
-    <div class="card">App Design</div>
-    <div class="card">Web Design</div>
-    <div class="card">UI Design</div>
-    <div class="card">UX Research</div>
-    <div class="card">Prototyping</div>
-    <div class="card">Branding</div>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section class="section reveal" id="about">
-  <h2>About Me</h2>
-  <p class="about-text">
-    I am a UI/UX designer who enjoys crafting clean, usable,
-    and visually engaging digital experiences.
-  </p>
-
-  <button class="btn">Download CV</button>
-
-  <div class="skills">
-    <div class="skill">
-      <div class="circle">85%</div>
-      <p>Adobe Photoshop</p>
+  <section>
+    <h2>Skills</h2>
+    <div class="skills">
+      <span>HTML</span>
+      <span>CSS</span>
+      <span>JavaScript</span>
+      <span>Python</span>
+      <span>Arduino</span>
+      <span>ESP32</span>
+      <span>IoT</span>
     </div>
-    <div class="skill">
-      <div class="circle">100%</div>
-      <p>Figma</p>
+  </section>
+
+  <section>
+    <h2>Projects</h2>
+
+    <div class="project">
+      <h3>🌿 Plant Disease Detection</h3>
+      <p>AI-based system to identify plant diseases using images.</p>
     </div>
-  </div>
-</section>
 
-<!-- PORTFOLIO -->
-<section class="section reveal" id="portfolio">
-  <h2>Portfolio</h2>
+    <div class="project">
+      <h3>🚌 Smart Bus Alert System</h3>
+      <p>IoT system that alerts students when the bus reaches their stop.</p>
+    </div>
 
-  <div class="filters">
-    <button class="btn small">All</button>
-    <button class="btn small outline">Web</button>
-    <button class="btn small outline">App</button>
-    <button class="btn small outline">Branding</button>
-  </div>
+    <div class="project">
+      <h3>🌱 Smart Greenhouse</h3>
+      <p>Monitors temperature, humidity, and soil moisture automatically.</p>
+    </div>
 
-  <div class="portfolio-grid">
-    <div class="portfolio-card"></div>
-    <div class="portfolio-card"></div>
-    <div class="portfolio-card"></div>
-    <div class="portfolio-card"></div>
-    <div class="portfolio-card"></div>
-    <div class="portfolio-card"></div>
-  </div>
-</section>
+  </section>
 
-<!-- CONTACT -->
-<section class="section reveal" id="contact">
-  <h2>Contact Me</h2>
+  <section>
+    <h2>Contact</h2>
+    <p>Email: <b>jeevan66lava@gmail.com@gmail.com</b></p>
+    <p>GitHub: <a href="https://github.com/yourusername">github.com/yourusername</a></p>
+    <p>LinkedIn: <a href="#">linkedin.com/in/yourname</a></p>
 
-  <form class="contact-form">
-    <input type="text" placeholder="Name" required>
-    <input type="email" placeholder="Email" required>
-    <textarea placeholder="Message" rows="4"></textarea>
-    <button class="btn">Send</button>
-  </form>
-</section>
+    <!-- RESUME DOWNLOAD -->
+    <a class="resume-btn" href="resume.pdf" download>📄 Download Resume</a>
+  </section>
 
-<footer>
-  <p>© 2025 Jeevanantham | UI/UX Designer</p>
-</footer>
+  <footer>
+    <p>© 2026 Jeeva | Portfolio</p>
+  </footer>
 
-<script src="script.js"></script>
+  <script>
+    function toggleMode() {
+      document.body.classList.toggle("dark");
+    }
+  </script>
+
 </body>
 </html>

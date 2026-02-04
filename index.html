@@ -5,139 +5,17 @@
   <title>Jo | Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f4f6f8;
-      color: #333;
-      transition: 0.3s;
-    }
-
-    body.dark {
-      background: #121212;
-      color: #e0e0e0;
-    }
-
-    header {
-      background: #2c3e50;
-      color: white;
-      text-align: center;
-      padding: 40px 20px;
-    }
-
-    body.dark header {
-      background: #000;
-    }
-
-    header img {
-      width: 130px;
-      height: 130px;
-      border-radius: 50%;
-      border: 4px solid white;
-      margin-bottom: 15px;
-    }
-
-    header h1 {
-      margin: 10px 0 5px;
-      font-size: 32px;
-    }
-
-    header p {
-      font-size: 16px;
-      opacity: 0.9;
-    }
-
-    section {
-      max-width: 900px;
-      margin: auto;
-      padding: 40px 20px;
-    }
-
-    h2 {
-      color: #2c3e50;
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 8px;
-    }
-
-    body.dark h2 {
-      color: #ffffff;
-      border-color: #444;
-    }
-
-    .skills span {
-      display: inline-block;
-      background: #3498db;
-      color: white;
-      padding: 8px 14px;
-      margin: 6px;
-      border-radius: 20px;
-      font-size: 14px;
-    }
-
-    .project {
-      background: white;
-      padding: 15px;
-      margin: 15px 0;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-
-    body.dark .project {
-      background: #1e1e1e;
-    }
-
-    a {
-      color: #3498db;
-      text-decoration: none;
-    }
-
-    .resume-btn {
-      display: inline-block;
-      background: #3498db;
-      color: white;
-      padding: 12px 18px;
-      border-radius: 6px;
-      margin-top: 10px;
-    }
-
-    footer {
-      background: #2c3e50;
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
-
-    body.dark footer {
-      background: #000;
-    }
-
-    .toggle {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      padding: 10px 14px;
-      border-radius: 20px;
-      border: none;
-      cursor: pointer;
-      font-size: 14px;
-    }
-  </style>
+  <!-- CSS FILE LINK -->
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- Dark Mode Button -->
+  <!-- Dark Mode Toggle -->
   <button class="toggle" onclick="toggleMode()">🌙 Dark</button>
 
   <header>
-    <!-- PROFILE PHOTO -->
     <img src="profile.jpg" alt="Profile Photo">
-
     <h1>Jo</h1>
     <p>ECE Student | IoT | Web Development</p>
   </header>
@@ -145,9 +23,9 @@
   <section>
     <h2>About Me</h2>
     <p>
-      I am an Electronics and Communication Engineering student with interest
-      in IoT, Embedded Systems, and Web Development. I enjoy building smart
-      real-world projects and learning new technologies.
+      I am an Electronics and Communication Engineering student.
+      Interested in IoT, Embedded Systems and Web Development.
+      I enjoy working on real-world projects.
     </p>
   </section>
 
@@ -169,33 +47,32 @@
 
     <div class="project">
       <h3>🌿 Plant Disease Detection</h3>
-      <p>AI-based system to identify plant diseases using images.</p>
+      <p>AI-based system to detect plant diseases using images.</p>
     </div>
 
     <div class="project">
       <h3>🚌 Smart Bus Alert System</h3>
-      <p>IoT system that alerts students when the bus reaches their stop.</p>
+      <p>IoT-based alert system for students.</p>
     </div>
 
     <div class="project">
       <h3>🌱 Smart Greenhouse</h3>
-      <p>Monitors temperature, humidity, and soil moisture automatically.</p>
+      <p>Monitors temperature, humidity and soil moisture.</p>
     </div>
 
   </section>
 
   <section>
     <h2>Contact</h2>
-    <p>Email: <b>jeevan66lava@gmail.com@gmail.com</b></p>
+    <p>Email: <b>yourmail@gmail.com</b></p>
     <p>GitHub: <a href="https://github.com/yourusername">github.com/yourusername</a></p>
     <p>LinkedIn: <a href="#">linkedin.com/in/yourname</a></p>
 
-    <!-- RESUME DOWNLOAD -->
     <a class="resume-btn" href="resume.pdf" download>📄 Download Resume</a>
   </section>
 
   <footer>
-    <p>© 2026 Jeeva | Portfolio</p>
+    <p>© 2026 Jo | Portfolio</p>
   </footer>
 
   <script>

@@ -1,86 +1,402 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>JEEVANANTHAM| Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- CSS FILE LINK -->
-  <link rel="stylesheet" href="style.css">
+<head>
+  <meta charset="UTF-8" />
+  <title>Jeevanantham | Frontend Developer & UI/UX Enthusiast</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Resume-ready portfolio for a B.E ECE student aspiring to work as a Frontend Developer and UI/UX intern." />
+
+  <!-- Google Font (pure CSS, no JS frameworks) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+  <!-- ================= HEADER / HERO ================= -->
+  <header class="site-header" id="top">
+    <div class="nav-container">
+      <div class="logo">Jeevanantham<span></span></div>
 
-  <!-- Dark Mode Toggle -->
-  <button class="toggle" onclick="toggleMode()">🌙 Dark</button>
+      <!-- Simple navigation -->
+      <nav class="main-nav">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
 
-  <header>
-    <img src="profile.jpg" alt="Profile Photo">
-    <h1>Jo</h1>
-    <p>Frontend Developer & UI & UX Designer</p>
+      <!-- Dark mode toggle button -->
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+        <span class="theme-icon">🌙</span>
+      </button>
+    </div>
+
+    <div class="hero container fade-in-on-load">
+      <div class="hero-left">
+        <!-- Profile image – replace src with your own local photo file if available -->
+        <div class="profile-photo-wrapper">
+          <img src="images/profile.jpg" alt="Profile photo of Jeevanantham" class="profile-photo" />
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <p class="hero-tagline">Electronics & Communication Engineering | Aspiring Frontend & UI/UX Intern</p>
+        <h1 class="hero-title">Hi, I'm <span>Jeevanantham</span></h1>
+        <h2 class="hero-subtitle">Frontend Developer & UI/UX Enthusiast</h2>
+
+        <p class="hero-summary">
+          I design and develop clean, responsive web interfaces with a strong focus on usability,
+          visual consistency, and performance. I enjoy translating ideas into visually clear
+          and user-friendly experiences.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#projects" class="btn primary-btn">View Projects</a>
+          <a href="#contact" class="btn secondary-btn">Contact Me</a>
+        </div>
+      </div>
+    </div>
   </header>
 
-  <section>
-    <h2>About Me</h2>
-    <p>
-      I am an Electronics and Communication Engineering student.
-      Interested in IoT, Embedded Systems and Web Development Frontend Development.
-      I enjoy working on real-world projects
-    </p>
-  </section>
+  <main>
+    <!-- ================= ABOUT SECTION ================= -->
+    <section class="section" id="about">
+      <div class="container section-inner reveal-on-scroll">
+        <h2 class="section-title">About Me</h2>
+        <p class="section-intro">
+          A concise, resume-style summary focused on your background and goals.
+        </p>
 
-  <section>
-    <h2>Skills</h2>
-    <div class="skills">
-      <span>HTML</span>
-      <span>CSS</span>
-      <span>JavaScript</span>
-      <span>UI & UX</span>
-      <span>Prototyping</span>
-      <span>Wireframing</span>
-      <span>Frontend Development</span>
+        <div class="about-grid">
+          <div class="about-text">
+            <!-- Professional, resume-style summary 
+            <p>
+              I am an Electronics and Communication Engineering (ECE) student with a strong interest in
+              frontend development and UI/UX design. I enjoy designing interfaces that are both visually
+              consistent and easy to use, and I continuously work on strengthening my fundamentals in HTML,
+              CSS, and JavaScript.
+            </p>
+            -->
+            <p>
+              Through academic projects and self-driven work, I have built responsive web pages,
+              interactive dashboards, and modern user interfaces inspired by Figma concepts. I pay
+              attention to layout, typography, spacing, and accessibility to ensure that each interface
+              supports a clear user journey.
+            </p>
+            <p>
+              I am actively seeking internship opportunities where I can contribute as a frontend
+              developer and UI/UX intern, learn from experienced teams, and help deliver reliable,
+              user-centric web experiences.
+            </p>
+          </div>
+
+          <div class="about-meta">
+            <h3 class="about-meta-title">Profile Snapshot</h3>
+            <ul class="meta-list">
+              <li><span>Degree</span><span>B.E – Electronics & Communication Engineering</span></li>
+              <li><span>Focus Areas</span><span>Frontend Development, UI/UX Design</span></li>
+              <li><span>Looking For</span><span>Frontend / UI/UX Internship</span></li>
+              <li><span>Location</span><span>Open to remote & on-site roles</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SKILLS SECTION ================= -->
+    <section class="section section-alt" id="skills">
+      <div class="container section-inner reveal-on-scroll">
+        <h2 class="section-title">Skills</h2>
+        <p class="section-intro">
+          Skills are organized in a resume-style, grouped by area.
+        </p>
+
+        <div class="skills-grid">
+          <!-- Frontend Development group -->
+          <div class="skill-card">
+            <h3>Frontend Development</h3>
+            <ul>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>Responsive Design</li>
+            </ul>
+          </div>
+
+          <!-- UI / UX group -->
+          <div class="skill-card">
+            <h3>UI / UX</h3>
+            <ul>
+              <li>Wireframing</li>
+              <li>Prototyping</li>
+            </ul>
+          </div>
+
+          <!-- Tools group -->
+          <div class="skill-card">
+            <h3>Tools</h3>
+            <ul>
+              <li>GitHub</li>
+              <li>VS Code</li>
+              <li>Canva</li>
+              <li>Figma</li>
+              <li>Photoshop</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROJECTS SECTION ================= -->
+    <section class="section" id="projects">
+      <div class="container section-inner reveal-on-scroll">
+        <h2 class="section-title">Projects</h2>
+        <p class="section-intro">
+          Selected academic and self-initiated projects showcasing frontend, UI/UX, and IoT integration.
+        </p>
+
+        <div class="projects-grid">
+          <!-- ========= Project 1 ========= -->
+          <article class="project-card">
+            <!-- Project image / thumbnail -->
+            <div class="project-media">
+              <!-- Use your own local thumbnail: images/greenhouse.png -->
+              <img src="images/green_house_dashboard.png" alt="Smart Greenhouse web dashboard interface preview"
+                class="project-image" />
+            </div>
+
+            <!-- Project content -->
+            <div class="project-content">
+              <h3 class="project-title">Smart Greenhouse – IoT &amp; Web Dashboard</h3>
+              <p class="project-description">
+                IoT-based greenhouse system with real-time sensor monitoring and a responsive web dashboard,
+                enabling clear visualization of environmental conditions and supporting better control decisions.
+              </p>
+
+              <!-- Technologies used -->
+              <ul class="tech-list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>ESP8266</li>
+                <li>ESP32-CAM</li>
+                <li>Figma</li>
+              </ul>
+
+              <!-- Project links -->
+              <div class="project-links">
+                <!-- Replace # with your actual hosted demo URL (e.g., GitHub Pages or custom domain) -->
+                <a href="https://smart-greenhouse-web.vercel.app/" class="project-link" target="_blank"
+                  rel="noopener noreferrer">
+                  Live Demo
+                </a>
+                <a href="https://github.com/Jeevanantham10082003/smart-greenhouse-web" class="project-link"
+                  target="_blank" rel="noopener noreferrer">
+                  GitHub Repository
+                </a>
+                <!-- Replace with your public Figma file link if available -->
+                <a href="https://www.figma.com/design/nPyatfhawyS1zpZ1fWL5AL/Green-House?node-id=0-1&t=BVVqbCQehQQuDpZU-1"
+                  class="project-link" target="_blank" rel="noopener noreferrer">
+                  Figma Design
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ========= Project 2 ========= -->
+          <article class="project-card">
+            <div class="project-media">
+              <!-- Use your own local thumbnail: images/404.png -->
+              <img src="images/404.png" alt="Modern 404 page UI screenshot" class="project-image" />
+            </div>
+
+            <div class="project-content">
+              <h3 class="project-title">404 “Page Not Found” – Sculpt UI</h3>
+              <p class="project-description">
+                A modern, responsive 404 page inspired by a Figma design, built using pure HTML and CSS
+                with attention to visual hierarchy, spacing, and smooth micro-animations.
+              </p>
+
+              <ul class="tech-list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Figma</li>
+              </ul>
+
+              <div class="project-links">
+                <!-- Replace # with live hosted link for the 404 page -->
+                <a href="https://jeevanantham10082003.github.io/404-ERROR-PAGE-/" class="project-link" target="_blank"
+                  rel="noopener noreferrer">
+                  Live Demo
+                </a>
+                <a href="https://github.com/Jeevanantham10082003/404-ERROR-PAGE-" class="project-link" target="_blank"
+                  rel="noopener noreferrer">
+                  GitHub Repository
+                </a>
+                <!-- Replace with your public Figma file link if available -->
+                <a href="https://www.figma.com/design/bijq1KZmhpkuMi4jKFrJGI/404-page" class="project-link"
+                  target="_blank" rel="noopener noreferrer">
+                  Figma Design
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ========= Project 3 ========= -->
+          <article class="project-card">
+            <div class="project-media">
+              <!-- Use your own local thumbnail: images/portfolio.png -->
+              <img src="images/portfolio.png" alt="Personal portfolio homepage screenshot" class="project-image" />
+            </div>
+
+            <div class="project-content">
+              <h3 class="project-title">Personal Portfolio Website</h3>
+              <p class="project-description">
+                Responsive personal portfolio website designed to highlight projects, technical skills,
+                and contact details in a clear, recruiter-friendly layout with dark mode support.
+              </p>
+
+              <ul class="tech-list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+              </ul>
+
+              <div class="project-links">
+                <!-- Replace # with your actual deployed portfolio URL -->
+                <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">
+                  Live Website
+                </a>
+                <a href="https://github.com/Jeevanantham10082003/portfolio" class="project-link" target="_blank"
+                  rel="noopener noreferrer">
+                  GitHub Repository
+                </a>
+                <!-- Replace with your public Figma file link if available -->
+                <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">
+                  Figma Design
+                </a>
+              </div>
+            </div>
+          </article>
+          <!-- ========= Project 4 ========= -->
+          <article class="project-card">
+            <div class="project-media">
+              <!-- Use your own local thumbnail: images/portfolio.png -->
+              <img src="#" alt="Upcoming project thumbnail" class="project-image" />
+            </div>
+
+            <div class="project-content">
+              <h3 class="project-title">Upcoming</h3>
+              <p class="project-description">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus fuga aspernatur deserunt repudiandae
+                sed, facere odio, quo omnis fugiat ipsa, fugit qui officia totam nemo recusandae molestias aut.
+                Exercitationem, officia?
+              </p>
+
+              <ul class="tech-list">
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+
+              <div class="project-links">
+                <!-- Replace # with your actual deployed portfolio URL -->
+                <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">
+                  Live Website
+                </a>
+                <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">
+                  GitHub Repository
+                </a>
+                <!-- Replace with your public Figma file link if available -->
+                <a href="https://www.figma.com/design/bijq1KZmhpkuMi4jKFrJGI/404-page" class="project-link"
+                  target="_blank" rel="noopener noreferrer">
+                  Figma Design
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT SECTION ================= -->
+    <section class="section section-alt" id="contact">
+      <div class="container section-inner reveal-on-scroll">
+        <h2 class="section-title">Contact</h2>
+        <p class="section-intro">
+          Open to frontend development and UI/UX internship opportunities. Feel free to reach out.
+        </p>
+
+        <div class="contact-grid">
+          <div class="contact-details">
+            <!-- Email -->
+            <div class="contact-item">
+              <span class="contact-label">Email</span>
+              <a href="mailto:Jeevan66lava@gmail.com" class="contact-link">
+                Jeevan66lava@gmail.com
+              </a>
+            </div>
+
+            <!-- WhatsApp (mobile number) -->
+            <div class="contact-item">
+              <span class="contact-label">WhatsApp (Mobile)</span>
+              <!-- wa.me link with country code; adjust if needed -->
+              <a href="https://wa.me/918248958422" target="_blank" rel="noopener noreferrer" class="contact-link">
+                +91 82489 58422
+              </a>
+            </div>
+
+            <!-- GitHub -->
+            <div class="contact-item">
+              <span class="contact-label">GitHub</span>
+              <a href="https://github.com/Jeevanantham10082003" target="_blank" rel="noopener noreferrer"
+                class="contact-link">
+                github-Jeevanantham
+              </a>
+            </div>
+
+            <!-- LinkedIn -->
+            <div class="contact-item">
+              <span class="contact-label">LinkedIn</span>
+              <a href="https://www.linkedin.com/in/jeeva-nantham-/" target="_blank" rel="noopener noreferrer"
+                class="contact-link">
+                linkedin-jeevanantham
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-actions">
+            <!-- Resume download – replace href with your actual PDF file path -->
+            <a href="assets/Jeeva_Resume.pdf" class="btn primary-btn" download>
+              Download Resume
+            </a>
+            <p class="contact-note">
+              For internship or collaboration enquiries, you can contact me directly via email,
+              WhatsApp, or LinkedIn. I will respond as soon as possible.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Jeeva. All rights reserved.</p>
+      <p class="footer-meta">Frontend Development &amp; UI/UX Portfolio</p>
     </div>
-  </section>
-
-  <section>
-    <h2>Projects</h2>
-
-    <div class="project">
-      <h3>🌱 Smart Greenhouse(Iot+web dashboard)</h3>
-      <p>Built a smart greenhouse designed by Figma, solution with real-time sensor monitoring and remote control using ESP8266 and ESP32-CAM. Implemented auto and manual modes for efficient plant care, including live camera monitoring through a web-based dashboard.</p>
-    </div>
-
-    <div class="project">
-      <h3>Personal portfolio website</h3>
-      <p>Designed and developed a personal portfolio website to showcase projects and skills.</p>
-    </div>
-
-    <div class="project">
-      <h3>404 “Page Not Found” UI</h3>
-      <p>A modern, responsive 404 “Page Not Found” UI inspired by a Figma design.
-This project recreates the layout using pure HTML & CSS, featuring a playful character illustration, smooth animation, and clean visual hierarchy.</p>
-    </div>
-
-  </section>
-
-  <section>
-    <h2>Contact</h2>
-    <p>Email: <b>jeevan66lava@gmail</b></p>
-    <p>GitHub: <a href="https://github.com/Jeevanantham10082003">github.com/Jeevanantham</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/jeeva-nantham">linkedin.com/in/Jeevanantham</a></p>
-
-    <a class="resume-btn" href="resume.pdf" download>📄 Download Resume</a>
-  </section>
-
-  <footer>
-    <p>© 2026 Jeeva | Portfolio</p>
   </footer>
 
-  <script>
-    function toggleMode() {
-      document.body.classList.toggle("dark");
-    }
-  </script>
-
+  <!-- Main script -->
+  <script src="script.js"></script>
 </body>
+
 </html>

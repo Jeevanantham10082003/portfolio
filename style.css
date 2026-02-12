@@ -473,14 +473,18 @@ body.light-theme .theme-toggle {
   overflow: hidden;
   background-color: var(--bg-card-soft);
   border: 1px solid var(--border-subtle);
+  /* Fixed thumbnail container height to keep cards aligned */
+  height: 240px; /* Requirement: ~220px–250px */
+  display: block;
 }
 
 /* Project thumbnail image (responsive) */
 .project-image {
   width: 100%;
-  height: 210px;
-  max-height: 210px;         /* Avoid very tall images */
-  object-fit: cover;         /* Crop to keep aspect ratio and focus */
+  height: 100%;
+  /* Maintain aspect ratio with clean cropping (no stretching) */
+  object-fit: cover;
+  object-position: center;
   display: block;
   transition: transform 0.35s ease;
 }
@@ -549,6 +553,118 @@ body.light-theme .theme-toggle {
   color: #ffffff;
   border-color: var(--accent-strong);
   transform: translateY(-1px);
+}
+
+/* =========================
+   Poster Design Section
+   ========================= */
+
+.poster-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+.poster-card {
+  background-color: var(--bg-card);
+  border-radius: 20px;
+  border: 1px solid var(--border-subtle);
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.6);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.poster-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  background: radial-gradient(circle at top left, rgba(91, 141, 239, 0.28), transparent 62%);
+  transition: opacity 0.25s ease;
+}
+
+.poster-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 28px 75px rgba(0, 0, 0, 0.75);
+  border-color: rgba(91, 141, 239, 0.65);
+}
+
+.poster-card:hover::before {
+  opacity: 1;
+}
+
+.poster-media {
+  background-color: var(--bg-card-soft);
+  border-bottom: 1px solid var(--border-subtle);
+  /* Vertical poster preview window */
+  height: 380px;
+  overflow: hidden;
+}
+
+.poster-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.poster-card:hover .poster-image {
+  transform: scale(1.04);
+}
+
+.poster-content {
+  padding: 1.3rem 1.4rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  position: relative;
+}
+
+.poster-title {
+  font-size: 1.05rem;
+}
+
+.poster-description {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+}
+
+/* Badge list (tools used) */
+.badge-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 0.1rem;
+}
+
+.badge-list li {
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--text-muted);
+  font-size: 0.78rem;
+}
+
+body.light-theme .badge-list li {
+  background-color: rgba(60, 93, 217, 0.06);
+  border-color: rgba(60, 93, 217, 0.12);
+}
+
+.poster-actions {
+  margin-top: 0.3rem;
+}
+
+.poster-btn {
+  padding: 0.65rem 1.05rem;
+  font-size: 0.9rem;
 }
 
 /* =========================
@@ -677,6 +793,20 @@ body.light-theme .site-footer {
   }
 }
 
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  * {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 /* =========================
    Responsive Design
    ========================= */
@@ -714,6 +844,10 @@ body.light-theme .site-footer {
     grid-template-columns: 1fr;
   }
 
+  .poster-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .profile-photo-wrapper::after {
     bottom: -18px;
   }
@@ -749,6 +883,10 @@ body.light-theme .site-footer {
   }
 
   .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .poster-grid {
     grid-template-columns: 1fr;
   }
 

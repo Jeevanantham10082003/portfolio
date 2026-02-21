@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Jeevanantham | Frontend Developer & UI/UX Enthusiast</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Resume-ready portfolio for a B.E ECE student aspiring to work as a Frontend Developer and UI/UX intern." />
+
+  <!-- Google Font (pure CSS, no JS frameworks) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- ================= HEADER / HERO ================= -->
+  <header class="site-header" id="top">
+    <div class="nav-container">
+      <div class="logo">Jeevanantham<span></span></div>
+
+      <!-- Simple navigation -->
+      <nav class="main-nav">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#poster-design">Poster Design</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <!-- Dark mode toggle button -->
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+        <span class="theme-icon">🌙</span>
+      </button>
+    </div>
+
+    <div class="hero container fade-in-on-load">
+      <div class="hero-left">
+        <!-- Profile image – replace src with your own local photo file if available -->
+        <div class="profile-photo-wrapper">
+          <img src="images/profile.jpg" alt="Profile photo of Jeevanantham" class="profile-photo" />
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <p class="hero-tagline">Electronics & Communication Engineering | Aspiring Frontend & UI/UX Intern</p>
+        <h1 class="hero-title">Hi, I'm <span>Jeevanantham</span></h1>
+        <h2 class="hero-subtitle">Frontend Developer & UI/UX Enthusiast</h2>
+
+        <p class="hero-summary">
+          I design and develop clean, responsive web interfaces with a strong focus on usability,
+          visual consistency, and performance. I enjoy translating ideas into visually clear
+          and user-friendly experiences.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#projects" class="btn primary-btn">View Projects</a>
+          <a href="#contact" class="btn secondary-btn">Contact Me</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= ABOUT SECTION ================= -->
+    <section class="section" id="about">
+      <div class="container section-inner reveal-on-scroll">
+        <h2 class="section-title">About Me</h2>
+        <p class="section-intro">
+          A concise, resume-style summary focused on your background and goals.
+        </p>
+
+        <div class="about-grid">
+          <div class="about-text">
+            <!-- Professional, resume-style summary 
+            <p>
+              I am an Electronics and Communication Engineering (ECE) student with a strong interest in
+              frontend development and UI/UX design. I enjoy designing interfaces that are both visually
+              consistent and easy to use, and I continuously work on strengthening my fundamentals in HTML,
+              CSS, and JavaScript.
+            </p>
+            -->
+            <p>
+              Through academic projects and self-driven work, I have built responsive web pages,
+              interactive dashboards, and modern user interfaces inspired by Figma concepts. I pay
+              attention to layout, typography, spacing, and accessibility to ensure that each interface
+              supports a clear user journey.
+            </p>
+            <p>
+              I am actively seeking internship opportunities where I can contribute as a frontend
+              developer and UI/UX intern, learn from experienced teams, and help deliver reliable,
+              user-centric web experiences.
+            </p>
+          </div>
+
+          <div class="about-meta">
+            <h3 class="about-meta-title">Profile Snapshot</h3>
+            <ul class="meta-list">
+              <li><span>Degree</span><span>B.E – Electronics & Communication Engineering</span></li>
+              <li><span>Focus Areas</span><span>Frontend Development, UI/UX Design</span></li>
+              <li><span>Looking For</span><span>Frontend / UI/UX Internship</span></li>
+              <li><span>Location</span><span>Open to remote & on-site roles</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SKILLS SECTION ================= -->
+    <section class="section section-alt" id="skills">
+      <div class="container section-inner reveal-on-scroll">
+        <h2 class="section-title">Skills</h2>
+        <p class="section-intro">
+          Skills are organized in a resume-style, grouped by area.
+        </p>
+
+        <div class="skills-grid">
+          <!-- Frontend Development group -->
+          <div class="skill-card">
+            <h3>Frontend Development</h3>
+            <ul>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>Responsive Design</li>
+            </ul>
+          </div>
+
+          <!-- UI / UX group -->
+          <div class="skill-card">
+            <h3>UI / UX</h3>
+            <ul>
+              <li>Wireframing</li>
+              <li>Prototyping</li>
+            </ul>
+          </div>
+
+          <!-- Tools group -->
+          <div class="skill-card">
+            <h3>Tools</h3>
+            <ul>
+              <li>GitHub</li>
+              <li>VS Code</li>
+              <li>Canva</li>
+              <li>Figma</li>
+              <li>Photoshop</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROJECTS SECTION ================= -->
+    <section class="section" id="projects">
+      <div class="container section-inner reveal-on-scroll">
+        <h2 class="section-title">Projects</h2>
+        <p class="section-intro">
+          Selected academic and self-initiated projects showcasing frontend, UI/UX, and IoT integration.
+        </p>
+
+        <div class="projects-grid">
+          <!-- ========= Project 1 ========= -->
+          <article class="project-card">
+            <!-- Project image / thumbnail -->
+            <div class="project-media">
+              <!-- Use your own local thumbnail: images/greenhouse.png -->
+              <img src="images/green_house_dashboard.png" alt="Smart Greenhouse web dashboard interface preview"
+                class="project-image" />
+            </div>
+
+            <!-- Project content -->
+            <div class="project-content">
+              <h3 class="project-title">Smart Greenhouse – IoT &amp; Web Dashboard</h3>
+              <p class="project-description">
+                IoT-based greenhouse system with real-time sensor monitoring and a responsive web dashboard,
+                enabling clear visualization of environmental conditions and supporting better control decisions.
+              </p>
+
+              <!-- Technologies used -->
+              <ul class="tech-list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>ESP8266</li>
+                <li>ESP32-CAM</li>
+                <li>Figma</li>
+              </ul>
+
+              <!-- Project links -->
+              <div class="project-links">
+                <!-- Replace # with your actual hosted demo URL (e.g., GitHub Pages or custom domain) -->
+                <a href="https://smart-greenhouse-web.vercel.app/" class="project-link" target="_blank"
+                  rel="noopener noreferrer">
+                  Live Demo
+                </a>
+                <a href="https://github.com/Jeevanantham10082003/smart-greenhouse-web" class="project-link"
+                  target="_blank" rel="noopener noreferrer">
+                  GitHub Repository
+                </a>
+                <!-- Replace with your public Figma file link if available -->
+                <a href="https://www.figma.com/design/nPyatfhawyS1zpZ1fWL5AL/Green-House?node-id=0-1&t=BVVqbCQehQQuDpZU-1"
+                  class="project-link" target="_blank" rel="noopener noreferrer">
+                  Figma Design
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ========= Project 2 ========= -->
+          <article class="project-card">
+            <div class="project-media">
+              <!-- Use your own local thumbnail: images/404.png -->
+              <img src="images/404.png" alt="Modern 404 page UI screenshot" class="project-image" />
+            </div>
+
+            <div class="project-content">
+              <h3 class="project-title">404 “Page Not Found” – Sculpt UI</h3>
+              <p class="project-description">
+                A modern, responsive 404 page inspired by a Figma design, built using pure HTML and CSS
+                with attention to visual hierarchy, spacing, and smooth micro-animations.
+              </p>
+
+              <ul class="tech-list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Figma</li>
+              </ul>
+
+              <div class="project-links">
+                <!-- Replace # with live hosted link for the 404 page -->
+                <a href="https://jeevanantham10082003.github.io/404-ERROR-PAGE-/" class="project-link" target="_blank"
+                  rel="noopener noreferrer">
+                  Live Demo
+                </a>
+                <a href="https://github.com/Jeevanantham10082003/404-ERROR-PAGE-" class="project-link" target="_blank"
+                  rel="noopener noreferrer">
+                  GitHub Repository
+                </a>
+                <!-- Replace with your public Figma file link if available -->
+                <a href="https://www.figma.com/design/bijq1KZmhpkuMi4jKFrJGI/404-page" class="project-link"
+                  target="_blank" rel="noopener noreferrer">
+                  Figma Design
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ========= Project 3 ========= -->
+          <article class="project-card">
+            <div class="project-media">
+              <!-- Use your own local thumbnail: images/portfolio.png -->
+              <img src="images/portfolio.png" alt="Personal portfolio homepage screenshot" class="project-image" />
+            </div>
+
+            <div class="project-content">
+              <h3 class="project-title">Personal Portfolio Website</h3>
+              <p class="project-description">
+                Responsive personal portfolio website designed to highlight projects, technical skills,
+                and contact details in a clear, recruiter-friendly layout with dark mode support.
+              </p>
+
+              <ul class="tech-list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+              </ul>
+
+              <div class="project-links">
+                <a href="#top" class="project-link">
+                  This Website
+                </a>
+                <a href="https://github.com/Jeevanantham10082003/portfolio" class="project-link" target="_blank"
+                  rel="noopener noreferrer">
+                  GitHub Repository
+                </a>
+              </div>
+            </div>
+          </article>
+          <!-- ========= Project 4 ========= -->
+          <article class="project-card">
+            <div class="project-media">
+              <!-- Use your own local thumbnail: images/upcoming-project.png -->
+              <img src="images/upcoming-project.png" alt="Upcoming project thumbnail (placeholder)" class="project-image" />
+            </div>
+
+            <div class="project-content">
+              <h3 class="project-title">Upcoming</h3>
+              <p class="project-description">
+                New project in progress. Check back soon for details, tech stack, and live links.
+              </p>
+
+              <ul class="tech-list tech-list-upcoming">
+                <li>Coming soon</li>
+              </ul>
+
+              <div class="project-links">
+                <span class="project-link project-link-disabled" aria-disabled="true">Live — TBA</span>
+                <span class="project-link project-link-disabled" aria-disabled="true">GitHub — TBA</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- ========= Project 5 ========= -->
+          <article class="project-card">
+            <div class="project-media">
+              <img src="images/project5.png" alt="Project 5 preview" class="project-image" />
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Project Title 5</h3>
+              <p class="project-description">
+                Add a short description of your project, technologies used, and what you learned or built.
+              </p>
+              <ul class="tech-list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+              </ul>
+              <div class="project-links">
+                <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ========= Project 6 ========= -->
+          <article class="project-card">
+            <div class="project-media">
+              <img src="images/project6.png" alt="Project 6 preview" class="project-image" />
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Project Title 6</h3>
+              <p class="project-description">
+                Add a short description of your project, technologies used, and what you learned or built.
+              </p>
+              <ul class="tech-list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+              </ul>
+              <div class="project-links">
+                <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ========= Project 7 ========= -->
+          <article class="project-card">
+            <div class="project-media">
+              <img src="images/project7.png" alt="Project 7 preview" class="project-image" />
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Project Title 7</h3>
+              <p class="project-description">
+                Add a short description of your project, technologies used, and what you learned or built.
+              </p>
+              <ul class="tech-list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+              </ul>
+              <div class="project-links">
+                <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= POSTER DESIGN SECTION ================= -->
+    <section class="section section-alt" id="poster-design">
+      <div class="container section-inner reveal-on-scroll">
+        <h2 class="section-title">Poster Design</h2>
+        <p class="section-intro">
+          A small selection of poster concepts focused on typography, layout balance, and clear visual hierarchy.
+        </p>
+
+        <div class="poster-grid">
+          <!-- ========= Poster 1 ========= -->
+          <article class="poster-card">
+            <div class="poster-media">
+              <!-- Replace with your real file: images/poster1.jpg -->
+              <img src="Posters/News Letter.png" alt="Tech event poster preview" class="poster-image" />
+            </div>
+
+            <div class="poster-content">
+              <h3 class="poster-title">Tech Event Poster Design</h3>
+              <p class="poster-description">
+                Designed a modern promotional poster using clean typography and strong visual hierarchy for quick readability.
+              </p>
+
+              <ul class="badge-list" aria-label="Tools used">
+                <li>Canva</li>
+              </ul>
+
+              <div class="poster-actions">
+                <a class="btn secondary-btn poster-btn" href="Posters/News Letter.png" target="_blank" rel="noopener noreferrer">
+                  View Full Image
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ========= Poster 2 ========= -->
+          <article class="poster-card">
+            <div class="poster-media">
+              <!-- Replace with your real file: images/poster2.jpg -->
+              <img src="Posters/Thumbnail 1.png" alt="YouTube Thumbnail Design" class="poster-image" />
+            </div>
+
+            <div class="poster-content">
+              <h3 class="poster-title">YouTube Thumbnail</h3>
+              <p class="poster-description">
+                Created a minimal, brand-ready layout with consistent spacing, clear callouts, and balanced composition.
+              </p>
+
+              <ul class="badge-list" aria-label="Tools used">
+                <li>Pixel Lab</li>
+                <li>Canva</li>
+                <li>PicsArt</li>
+              </ul>
+
+              <div class="poster-actions">
+                <a class="btn secondary-btn poster-btn" href="Posters/Thumbnail 1.png" target="_blank" rel="noopener noreferrer">
+                  View Full Image
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ========= Poster 3 ========= -->
+          <article class="poster-card">
+            <div class="poster-media">
+              <!-- Optional third example (replace path if you add it) -->
+              <img src="Posters/Poster.png" alt="poster preview" class="poster-image" />
+            </div>
+
+            <div class="poster-content">
+              <h3 class="poster-title">Poster</h3>
+              <p class="poster-description">
+                A structured poster layout emphasizing readability, alignment, and a clear information flow from top to bottom.
+              </p>
+
+              <ul class="badge-list" aria-label="Tools used">
+                <li>Canva</li>
+              </ul>
+
+              <div class="poster-actions">
+                <a class="btn secondary-btn poster-btn" href="Posters/Poster.png" target="_blank" rel="noopener noreferrer">
+                  View Full Image
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ========= Poster 4 ========= -->
+          <article class="poster-card">
+            <div class="poster-media">
+              <img src="Posters/Happy Birthday Card.jpg" alt="Happy Birthday Card design" class="poster-image" />
+            </div>
+            <div class="poster-content">
+              <h3 class="poster-title">Happy Birthday Card</h3>
+              <p class="poster-description">
+                A birthday card design with balanced layout and clear typography for a celebratory message.
+              </p>
+              <ul class="badge-list" aria-label="Tools used">
+                <li>Canva</li>
+              </ul>
+              <div class="poster-actions">
+                <a class="btn secondary-btn poster-btn" href="Posters/Happy Birthday Card.jpg" target="_blank" rel="noopener noreferrer">
+                  View Full Image
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ========= Poster 5 ========= -->
+          <article class="poster-card">
+            <div class="poster-media">
+              <img src="Posters/Vollyeball Poster.png" alt="Volleyball event poster" class="poster-image" />
+            </div>
+            <div class="poster-content">
+              <h3 class="poster-title">Volleyball Event Poster</h3>
+              <p class="poster-description">
+                Event poster for a volleyball match or tournament with strong visual hierarchy and clear event details.
+              </p>
+              <ul class="badge-list" aria-label="Tools used">
+                <li>Canva</li>
+              </ul>
+              <div class="poster-actions">
+                <a class="btn secondary-btn poster-btn" href="Posters/Vollyeball Poster.png" target="_blank" rel="noopener noreferrer">
+                  View Full Image
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ========= Poster 6 ========= -->
+          <article class="poster-card">
+            <div class="poster-media">
+              <img src="Posters/Youtube banner.jpeg" alt="YouTube channel banner" class="poster-image" />
+            </div>
+            <div class="poster-content">
+              <h3 class="poster-title">YouTube Channel Banner</h3>
+              <p class="poster-description">
+                Channel banner design for YouTube with consistent branding, spacing, and readable layout for desktop and mobile.
+              </p>
+              <ul class="badge-list" aria-label="Tools used">
+                <li>Canva</li>
+              </ul>
+              <div class="poster-actions">
+                <a class="btn secondary-btn poster-btn" href="Posters/Youtube banner.jpeg" target="_blank" rel="noopener noreferrer">
+                  View Full Image
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT SECTION ================= -->
+    <section class="section section-alt" id="contact">
+      <div class="container section-inner reveal-on-scroll">
+        <h2 class="section-title">Contact</h2>
+        <p class="section-intro">
+          Open to frontend development and UI/UX internship opportunities. Feel free to reach out.
+        </p>
+
+        <div class="contact-grid">
+          <div class="contact-details">
+            <!-- Email -->
+            <div class="contact-item">
+              <span class="contact-label">Email</span>
+              <a href="mailto:Jeevan66lava@gmail.com" class="contact-link">
+                Jeevan66lava@gmail.com
+              </a>
+            </div>
+
+            <!-- WhatsApp (mobile number) -->
+            <div class="contact-item">
+              <span class="contact-label">WhatsApp (Mobile)</span>
+              <!-- wa.me link with country code; adjust if needed -->
+              <a href="https://wa.me/918248958422" target="_blank" rel="noopener noreferrer" class="contact-link">
+                +91 82489 58422
+              </a>
+            </div>
+
+            <!-- GitHub -->
+            <div class="contact-item">
+              <span class="contact-label">GitHub</span>
+              <a href="https://github.com/Jeevanantham10082003" target="_blank" rel="noopener noreferrer"
+                class="contact-link">
+                github-Jeevanantham
+              </a>
+            </div>
+
+            <!-- LinkedIn -->
+            <div class="contact-item">
+              <span class="contact-label">LinkedIn</span>
+              <a href="https://www.linkedin.com/in/jeeva-nantham-/" target="_blank" rel="noopener noreferrer"
+                class="contact-link">
+                linkedin-jeevanantham
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-actions">
+            <!-- Resume download – replace href with your actual PDF file path -->
+            <a href="assets/Jeeva_Resume.pdf" class="btn primary-btn" download>
+              Download Resume
+            </a>
+            <p class="contact-note">
+              For internship or collaboration enquiries, you can contact me directly via email,
+              WhatsApp, or LinkedIn. I will respond as soon as possible.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Jeeva. All rights reserved.</p>
+      <p class="footer-meta">Frontend Development &amp; UI/UX Portfolio</p>
+    </div>
+  </footer>
+
+  <!-- Main script -->
+  <script src="script.js"></script>
+</body>
+
+</html>

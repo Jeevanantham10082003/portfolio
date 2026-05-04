@@ -117,3 +117,67 @@
   const currentYear = new Date().getFullYear();
   yearSpan.textContent = currentYear;
 })();
+
+// ------------ CERTIFICATE SLIDER ------------
+
+(function setupCertificateSlider() {
+  const sliderContainer = document.querySelector('.slider-container');
+  const prevBtn = document.querySelector('.prev-btn');
+  const nextBtn = document.querySelector('.next-btn');
+  const cards = document.querySelectorAll('.certificate-card');
+
+  if (!sliderContainer || !prevBtn || !nextBtn || cards.length === 0) return;
+
+  let currentIndex = 0;
+  const totalCards = cards.length;
+  let startX = 0;
+  let isDragging = false;
+
+  function updateSlider() {
+    const translateX = -currentIndex * 100;
+    sliderContainer.style.transform = `translateX(${translateX}%)`;
+  }
+
+  prevBtn.addEventListener('click', function() {
+    currentIndex = (currentIndex > 0) ? currentIndex - 1 : totalCards - 1;
+    updateSlider();
+  });
+
+  nextBtn.addEventListener('click', function() {
+    currentIndex = (currentIndex < totalCards - 1) ? currentIndex + 1 : 0;
+    updateSlider();
+  });
+
+  // Touch events for swiping
+  sliderContainer.addEventListener('touchstart', function(e) {
+    startX = e.touches[0].clientX;
+    isDragging = true;
+  });
+
+  sliderContainer.addEventListener('touchmove', function(e) {
+    if (!isDragging) return;
+    const currentX = e.touches[0].clientX;
+    const diff = startX - currentX;
+    if (Math.abs(diff) > 50) { // Minimum swipe distance
+      if (diff > 0) {
+        // Swipe left - next
+        currentIndex = (currentIndex < totalCards - 1) ? currentIndex + 1 : 0;
+      } else {
+        // Swipe right - prev
+        currentIndex = (currentIndex > 0) ? currentIndex - 1 : totalCards - 1;
+      }
+      updateSlider();
+      isDragging = false;
+    }
+  });
+
+  sliderContainer.addEventListener('touchend', function() {
+    isDragging = false;
+  });
+
+  // Optional: Auto-slide every 5 seconds
+  // setInterval(() => {
+  //   currentIndex = (currentIndex < totalCards - 1) ? currentIndex + 1 : 0;
+  //   updateSlider();
+  // }, 5000);
+})();

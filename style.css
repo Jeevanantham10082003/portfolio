@@ -679,6 +679,94 @@ body.light-theme .badge-list li {
 }
 
 /* =========================
+   Certificate Slider
+   ========================= */
+
+.certificate-slider {
+  position: relative;
+  max-width: 860px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.slider-container {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 100%;
+}
+
+.certificate-card {
+  flex: 0 0 100%;
+  max-width: 100%;
+  background-color: var(--bg-card);
+  border-radius: 14px;
+  border: 1px solid var(--border-subtle);
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.certificate-card .poster-image {
+  object-fit: contain;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.certificate-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  background: radial-gradient(circle at top left, rgba(91, 141, 239, 0.28), transparent 62%);
+  transition: opacity 0.25s ease;
+}
+
+.certificate-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.6);
+  border-color: rgba(91, 141, 239, 0.65);
+}
+
+.certificate-card:hover::before {
+  opacity: 1;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: var(--text-main);
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+  z-index: 10;
+}
+
+.slider-btn:hover {
+  background-color: var(--bg-card-soft);
+  border-color: rgba(91, 141, 239, 0.65);
+}
+
+.prev-btn {
+  left: 12px;
+}
+
+.next-btn {
+  right: 12px;
+}
+
+/* =========================
    Contact Section
    ========================= */
 
@@ -910,6 +998,20 @@ body.light-theme .site-footer {
     width: 200px;
     height: 200px;
   }
+
+  .slider-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
+
+  .prev-btn {
+    left: 10px;
+  }
+
+  .next-btn {
+    right: 10px;
+  }
 }
 
 /* Extra small screens */
@@ -933,5 +1035,19 @@ body.light-theme .site-footer {
   .footer-inner {
     flex-direction: column;
     text-align: center;
+  }
+
+  .slider-btn {
+    width: 30px;
+    height: 30px;
+    font-size: 0.9rem;
+  }
+
+  .prev-btn {
+    left: -10px;
+  }
+
+  .next-btn {
+    right: -10px;
   }
 }

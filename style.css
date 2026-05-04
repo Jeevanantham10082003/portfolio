@@ -709,8 +709,19 @@ body.light-theme .badge-list li {
   flex-direction: column;
 }
 
+.certificate-card .poster-media {
+  background-color: var(--bg-card-soft);
+  border-bottom: 1px solid var(--border-subtle);
+  height: auto;
+  min-height: 260px;
+  overflow: hidden;
+}
+
 .certificate-card .poster-image {
+  width: 100%;
+  height: auto;
   object-fit: contain;
+  display: block;
   background-color: rgba(255, 255, 255, 0.05);
 }
 
